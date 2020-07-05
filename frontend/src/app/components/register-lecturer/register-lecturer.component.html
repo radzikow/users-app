@@ -1,0 +1,49 @@
+<div class="mt-4 col-8 offset-2">
+
+  <div class="card">
+
+    <div class="card-header">Register form (step 2/2)</div>
+
+    <div class="card-body">
+
+      <!-- Register form -->
+      <form #f="ngForm" (ngSubmit)="onRegisterLecturer(f)">
+
+        <!-- phone -->
+        <div class="form-group row">
+          <label for="inputPhone" class="col-sm-2 col-form-label">Phone number</label>
+          <div class="col-sm-10">
+            <input type="string" name="phone" class="form-control" id="inputPhone" ngModel required>
+          </div>
+        </div>
+
+        <!-- education -->
+        <div class="form-group row">
+          <label for="inputEducation" class="col-sm-2 col-form-label">Education degree</label>
+          <div class="col-sm-10">
+            <select class="form-control" name="education" id="inputEducation" ngModel required>
+              <option value="Bachelor of Arts (B.A.)">Bachelor of Arts (B.A.)</option>
+              <option value="Bachelor of Science (B.S.)">Bachelor of Science (B.S.)</option>
+              <option value="Master of Arts (M.A.)">Master of Arts (M.A.)</option>
+              <option value="Master of Science (M.S.)">Master of Science (M.S.)</option>
+              <option value="Doctor of Philosophy (Ph.D.)">Doctor of Philosophy (Ph.D.)</option>
+              <option value="Doctor of Education (Ed.D.)">Doctor of Education (Ed.D.)</option>
+              <option value="Medical Doctor (M.D.)">Medical Doctor (M.D.)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- submit -->
+        <div class="form-group row">
+          <div class="col-sm-10 offset-2">
+            <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>

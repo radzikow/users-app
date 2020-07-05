@@ -1,0 +1,81 @@
+<div class="mt-4 col-8 offset-2">
+
+  <div class="card">
+
+    <div class="card-header">Register form (step 1/2)</div>
+
+    <div class="card-body">
+
+      <!-- Register form -->
+      <form #f="ngForm" (ngSubmit)="onRegister(f)">
+
+        <!-- firstname -->
+        <div class="form-group row">
+          <label for="inputFirstname" class="col-sm-2 col-form-label">Firstname</label>
+          <div class="col-sm-10">
+            <input type="text" name="firstname" class="form-control" id="inputFirstname" ngModel required>
+          </div>
+        </div>
+
+        <!-- lastname -->
+        <div class="form-group row">
+          <label for="inputLastname" class="col-sm-2 col-form-label">Lastname</label>
+          <div class="col-sm-10">
+            <input type="text" name="lastname" class="form-control" id="inputLastname" ngModel required>
+          </div>
+        </div>
+
+        <!-- e-mail -->
+        <div class="form-group row">
+          <label for="inputEmail" class="col-sm-2 col-form-label">E-mail</label>
+          <div class="col-sm-10">
+            <input type="email" name="email" class="form-control" id="inputEmail" ngModel required>
+          </div>
+        </div>
+
+        <!-- password -->
+        <div class="form-group row">
+          <label for="inputPassword1" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" name="password" class="form-control" id="inputPassword1" ngModel autocomplete
+              required>
+          </div>
+        </div>
+
+        <!-- confirm password -->
+        <div class="form-group row">
+          <label for="inputPassword2" class="col-sm-2 col-form-label">Confirm password</label>
+          <div class="col-sm-10">
+            <input type="password" name="password_confirmation" class="form-control" id="inputPassword2" ngModel
+              autocomplete required>
+          </div>
+        </div>
+
+        <!-- type -->
+        <div class="form-group row">
+          <label for="inputType" class="col-sm-2 col-form-label">User type</label>
+          <div class="col-sm-10">
+            <select class="form-control" name="type" id="inputType" ngModel required>
+              <option value="Lecturer">Lecturer</option>
+              <option value="Administrative">Administrative</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- submit -->
+        <div class="form-group row">
+          <div class="col-sm-10 offset-2">
+            <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Next step</button>
+
+            <!-- link to register form -->
+            <a routerLink="/login" class="btn float-right">Login instead</a>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
