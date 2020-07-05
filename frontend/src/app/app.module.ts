@@ -14,7 +14,7 @@ import { ListComponent } from './components/list/list.component';
 import { RegisterAdministrativeComponent } from './components/register-administrative/register-administrative.component';
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [

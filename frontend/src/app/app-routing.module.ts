@@ -7,7 +7,6 @@ import { RegisterComponent } from './components/register/register.component';
 import { RegisterLecturerComponent } from './components/register-lecturer/register-lecturer.component';
 import { RegisterAdministrativeComponent } from './components/register-administrative/register-administrative.component';
 import { ListComponent } from './components/list/list.component';
-import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,8 +14,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'register-lecturer/:id', component: RegisterLecturerComponent },
   { path: 'register-administrative/:id', component: RegisterAdministrativeComponent },
-  { path: 'list', component: ListComponent },
-  // { path: '**', component: NotFoundComponent }
+  { path: 'list', component: ListComponent }
 ];
 
 @NgModule({
