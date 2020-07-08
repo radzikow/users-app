@@ -49,22 +49,29 @@ Now you can register a new user and login with typed in credentials.
 ## API routes
 
  Get all users:
+
 `GET api/users/all`
 
 Generate 100 new random users:
+
 `GET api/users/generate`
 
 Get user by id:
+
 `GET api/users/{id}`
 
-Registr a new user (step 1/2 of registration)
+Registr a new user (step 1/2 of registration):
+
 `POST api/users/register`
 
-Register lecturer (step 2/2 of registration)
+Register lecturer (step 2/2 of registration):
+
 `POST api/users/register-lecturer`
 
-Register administrative (step 2/2 of registration)
+Register administrative (step 2/2 of registration):
+
 `POST api/users/register-administrative`
 
-Login user
+Login user:
+
 `POST api/users/login`
