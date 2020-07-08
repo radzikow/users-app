@@ -10,8 +10,9 @@ use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
-    // -------------------
-    // register user
+    // -----------------------
+    // Register user
+    // -----------------------
     public function register(Request $request)
     {
         $request->validate([
@@ -44,8 +45,9 @@ class RegisterController extends Controller
         ], 201);
     }
 
-    // -------------------
-    // register lecturer
+    // -----------------------
+    // Register lecturer
+    // -----------------------
     public function registerLecturer(Request $request)
     {
         $request->validate([
@@ -56,7 +58,6 @@ class RegisterController extends Controller
         ]);
 
         $lecturer = User::find($request->id);
-
         $lecturer->update([
             'status' => $request->status,
         ]);
@@ -77,8 +78,9 @@ class RegisterController extends Controller
         ], 201);
     }
 
-    // -------------------
-    // register administrative
+    // -----------------------
+    // Register administrative
+    // -----------------------
     public function registerAdministrative(Request $request)
     {
         $request->validate([
@@ -89,7 +91,6 @@ class RegisterController extends Controller
         ]);
 
         $administrative = User::find($request->id);
-
         $administrative->update([
             'status' => $request->status,
         ]);

@@ -18,16 +18,12 @@ export class NavbarComponent implements OnInit {
     private token: TokenService
   ) { }
 
-  // ---------------------
-  // Check user status
   ngOnInit(): void {
     this.auth.authStatus.subscribe(value => {
       this.loggedIn = value;
     });
   }
 
-  // ---------------------
-  // Logout user
   logout(event: MouseEvent) {
     event.preventDefault();
     // remove token form local storage

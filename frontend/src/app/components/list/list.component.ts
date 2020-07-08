@@ -15,7 +15,10 @@ export class ListComponent implements OnInit {
   isLoading: boolean = false;
   fetchingData: boolean = false;
 
-  constructor(private userService: UserService, private router: Router) { }
+  sortingName: string;
+  isDesc: boolean;
+
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
     this.onGetUsers();
@@ -48,29 +51,14 @@ export class ListComponent implements OnInit {
       );
   }
 
-  // onSelect(user) {
-  //   this.router.navigate(['/list', user.id]);
-  // }
-
-  // onDelete(user) {
-  //   this.userService.deleteUser(user.id)
-  //     .subscribe(
-  //       (res) => {
-  //         console.log('User deleted.');
-  //         console.log(res);
-
-  //         const position = this.users.findIndex(
-  //           // Get the index of the first element in the array that has same id
-  //           (deletedUser) => {
-  //             return deletedUser.id == user.id;
-  //           }
-  //         );
-  //         // Remove element on specified position
-  //         this.users.splice(position, 1);
-  //         alert('User deleted.')
-  //       },
-  //       (err) => console.log(err)
-  //     );
-  // }
+  // Sort users
+  sort(name: string): void {
+    if (name && this.sortingName !== name) {
+      this.isDesc = false;
+    } else {
+      this.isDesc = !this.isDesc;
+    }
+    this.sortingName = name;
+  }
 
 }

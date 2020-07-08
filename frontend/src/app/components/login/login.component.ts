@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { TokenService } from 'src/app/services/token.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { NgForm } from '@angular/forms';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +11,6 @@ import { Observable } from 'rxjs';
 })
 export class LoginComponent implements OnInit {
 
-  // error message
   public error = null;
 
   constructor(

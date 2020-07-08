@@ -20,7 +20,6 @@ class UserController extends Controller
     public function getUsers()
     {
         $users = User::all();
-
         return response()->json(['users' => $users], 200);
     }
 
@@ -39,30 +38,19 @@ class UserController extends Controller
     public function getUser(Request $request, $id)
     {
         $user = User::find($id);
-
-        // http status: 200 OK
         return response()->json(['user' => $user], 200);
     }
 
     // -----------------------
-    // Edit product
+    // Edit user
     // -----------------------
     public function putUser(Request $request, $id)
     {
         $user = User::find($id);
-
         if (!$user) {
-            // http status: 404 Not Found
             return response()->json(['message' => 'User not found'], 404);
         }
-
-        // $user->name = $request->input('name');
-        // $user->description = $request->input('description');
-        // $user->price = $request->input('price');
-        // $user->status = $request->input('status');
-
         $user->save();
-
         return response()->json(['user' => $user], 200);
     }
 
@@ -73,8 +61,6 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->delete();
-
-        // http status: 200 OK
         return response()->json(['message' => 'User deleted.'], 200);
     }
 }

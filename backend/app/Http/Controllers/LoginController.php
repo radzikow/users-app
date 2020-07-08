@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    // -----------------------
+    // Login user
+    // -----------------------
     public function login(Request $request)
     {
         $credentials = $request->validate([

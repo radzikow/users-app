@@ -15,6 +15,7 @@ import { RegisterAdministrativeComponent } from './components/register-administr
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { OrderByPipe } from './pipes/order-by.pipe';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     RegisterLecturerComponent,
     ListComponent,
     RegisterAdministrativeComponent,
+    OrderByPipe,
   ],
   imports: [
     BrowserModule,

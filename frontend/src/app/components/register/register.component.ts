@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
-import { TokenService } from 'src/app/services/token.service';
-import { Observable } from 'rxjs';
 import { User } from 'src/app/interfaces/user';
 import { NgForm } from '@angular/forms';
 
@@ -17,7 +15,6 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private token: TokenService,
     private router: Router
   ) { }
 

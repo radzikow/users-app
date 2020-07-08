@@ -1,1 +1,12 @@
-<p>home works!</p>
+<div class="row">
+  <div class="col-12 mt-5">
+    <h1 class="text-center mt-5 mb-4">Hello, welcome to Users App!</h1>
+    <div *ngIf="!loggedIn" class="d-flex justify-content-center align-items-center p-2">
+      <a routerLink="register" class="btn btn-primary mr-3">Register</a>
+      <a routerLink="login" class="btn btn-success">Login</a>
+    </div>
+    <div *ngIf="loggedIn" class="d-flex justify-content-center align-items-center p-2">
+      <a routerLink="list" class="btn btn-success">Users list</a>
+    </div>
+  </div>
+</div>

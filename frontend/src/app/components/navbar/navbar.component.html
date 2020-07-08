@@ -1,11 +1,13 @@
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" routerLink="">Home</a>
+<nav class="navbar navbar-light">
+  <a class="navbar-brand" routerLink="">Users App</a>
 
+  <!-- user logged out -->
   <div *ngIf="!loggedIn">
     <a class="navbar-brand" routerLink="login">Login</a>
     <a class="navbar-brand" routerLink="register">Register</a>
   </div>
 
+  <!-- user logged in -->
   <div *ngIf="loggedIn">
     <a class="navbar-brand" routerLink="list">Users list</a>
     <a class="navbar-brand" href="#" (click)="logout($event)">Logout</a>

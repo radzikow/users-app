@@ -2,21 +2,46 @@
   width: 150px !important;
 }
 
+.buttonload {
+  background-color: #17a2b8;
+  color: white;
+}
+
 .msg {
   position: fixed;
-    top: 50%;
-    left: 0;
-    background: #007bffe0;
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 90;
-    transform: translate(0, -50%);
+  top: 42px;
+  left: 0;
+  background: #17a2b8;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  opacity: 0.8;
 
-    p {
-      color: white;
-      font-weight: 400;
+  p {
+    color: white;
+    font-weight: 400;
+    margin: 0px auto;
+  }
+}
+
+table {
+  thead {
+    th {
+      cursor: pointer;
+
+      &:hover {
+        color: #17a2b8;
+      }
+
+      &:first-child, &:last-child {
+        &:hover {
+          cursor: inherit;
+          color: inherit;
+        }
+      }
     }
+  }
 }
